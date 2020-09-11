@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+<title>Página Pessoal</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+
+    <h1>Ali Castilho Santos</h1>
+    <img src="img/ali.jpg" width="150"  style="margin-left: auto; margin-right: auto; display: block;">
+    <h2> Sistemas de Informação - 17103977 </h2>
+    <p>Paulista de Penápolis, noroeste do estado de São Paulo, matriculado inicialmente em 2014 no curso de Administração noturno na Universidade Federal de Santa Catarina, e em 2017 em Sistemas de Infomação, trabalho voluntário em nome do esporte e do lazer do público universitário desde 2017, inicialmente na Atlética do curso de Sistemas de Infomação(que uniu forças com a Atlética do curso de Ciências da Computação e hoje são uma só) e na Atlética do Centro Tecnológico. </p>
+
+
+        <div style="text-align: center;">
+        <p>Digite algo para inserir um Hobbie na lista:</p>
+        <input name="input" id="inputText" type="text" >
+        <button type="submit" id="inputBtn">Submit</button>
+
+    </div>
+    <div style="color: blueviolet"> 
+
+        <ul id="list1">
+            <li>Jogar meu Tibião</li>
+            <li>Tomar café</li>
+            <li>--</li>
+        </ul>
+       </div>
+    </br>
+
+    <div style="text-align: center;">
+        <p>Digite algo para inserir uma dúvida sobre JS na lista:</p>
+        <input name="input2" id="inputText2" type="text">
+        <button type="submit" id="inputBtn2">Submit</button>
+
+    </div>
+    <div  style="color: blueviolet"> 
+
+        <ul id="list2">
+            <li>Infinitas</li>
+            <li>--</li>
+        </ul>
+       </div>
+
+<script>
+document.getElementById("inputBtn").addEventListener("click", myFunction);
+
+document.getElementById("inputBtn2").addEventListener("click", myFunction2);
+
+function myFunction() {
+    var lista1 = document.getElementById("list1");
+    var inptText = document.getElementById("inputText").value;
+    console.log(inptText);
+    var node = document.createElement("li");
+    var textnode = document.createTextNode(inptText);
+    node.appendChild(textnode);
+    lista1.appendChild(node);
+}
+
+function myFunction2() {
+    var lista2 = document.getElementById("list2");
+    var inptText2 = document.getElementById("inputText2").value;
+    console.log(inptText2);
+    var node = document.createElement("li");
+    var textnode = document.createTextNode(inptText2);
+    node.appendChild(textnode);
+    lista2.appendChild(node);
+}
+</script>
+
+</body>
+</html>
